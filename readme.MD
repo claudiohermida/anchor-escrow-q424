@@ -33,6 +33,8 @@ The escrow account will hold the following data:
 ---
 
 ## The user will be able to create an escrow account. For that, we create the following context:
+
+![make workflow](escrow_imgs/make.png)
   
   ```rust
  #[derive(Accounts)]
@@ -124,6 +126,8 @@ In the `save_escrow` function, we set the escrow account's data. In the `deposit
 ---
 
 ## The maker of an escrow can refund the tokens from the vault and close the escrow account. For that, we create the following context:
+
+![make workflow](escrow_imgs/refund.png)
 
 ```rust
 #[derive(Accounts)]
@@ -219,6 +223,8 @@ Since the transfer occurs from a PDA, we need to pass the seeds while defining t
 ---
 
 ## The Taker of an escrow can deposit tokens of mint_b to the maker and recieve tokens of mint_a that the maker deposited. For that, we create the following context:
+
+![make workflow](escrow_imgs/take.png)
 
 ```rust
 #[derive(Accounts)]
